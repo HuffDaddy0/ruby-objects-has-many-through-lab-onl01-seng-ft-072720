@@ -17,10 +17,10 @@ class Patient
   end
 
   def appointments
-    Appointment.all.find_all {|song| song.patient == self}
+    Appointment.all.find_all {|appointment| appointment.patient == self}
   end
 
   def doctors
-    self.appointments.map {|song| song.doctor}
+    self.appointments.map {|appointment| appointment.doctor}
   end
 end
