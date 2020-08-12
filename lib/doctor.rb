@@ -15,10 +15,10 @@ end
 
 
 def appointments
-  Appointment.all.find_all {|song| song.doctor == self}
+  Appointment.all.find_all {|appt| appt.doctor == self}
 end
 
 def patients
-  self.songs.map {|song| song.patient}
+  self.appointments.map {|appt| appt.patient}
 end
 end
