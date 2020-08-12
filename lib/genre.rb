@@ -18,4 +18,5 @@ class Genre
   def artists
     Artist.all.find_all {|artist| artist.genre == self}
   end
-  
+
+end
