@@ -17,7 +17,7 @@ def new_appointment(date, patient)
 end
 
 def appointments
-  Appointment.all.find_all {|appt| appt.doctor == self}
+  Appointment.all.find_all {|appt| @doctor == self}
 end
 
 def patients
