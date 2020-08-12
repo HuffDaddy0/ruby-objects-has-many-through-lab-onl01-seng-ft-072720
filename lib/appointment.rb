@@ -3,8 +3,8 @@ class Appointment
 
 @@all = []
 
-def initialize(name, patient, doctor)
-  @name = name
+def initialize(date, doctor, patient)
+  @date = date
   @patient = patient
   @doctor = doctor
   @@all << self
