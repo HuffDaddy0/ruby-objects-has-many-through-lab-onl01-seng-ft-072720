@@ -12,11 +12,15 @@ class Patient
     @@all
   end
 
+  def new_appontment(date, doctor)
+    Appointment.new(date, doctor, self)
+  end
+  
   def appointments
     Appointment.all.find_all {|song| song.patient == self}
   end
 
-  def patients
-    self.appointments.map {|song| song.patient}
+  def doctors
+    self.appointments.map {|song| song.doctor}
   end
 end
