@@ -12,8 +12,8 @@ def self.all
   @@all
 end
 
-def new_song(name, genre)
-  Appointment.new(name, self, genre)
+def new_appontment(date, patient)
+  Appointment.new(date, self, patient)
 end
 
 def appointments
