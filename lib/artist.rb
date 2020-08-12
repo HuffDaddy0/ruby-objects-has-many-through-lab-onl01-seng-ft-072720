@@ -13,7 +13,7 @@ def self.all
 end
 
 def songs
-  Song.all.find {|song| song.artist == self}
+  Song.all.find_all {|song| song.artist == self}
 end
 
 def new_song(name, genre)
